@@ -1,0 +1,1915 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>越南 KOL 平台聲量與對標帳號研究 | UBO Vietnam</title>
+  <meta name="description" content="越南 YouTube、TikTok、Facebook、Instagram、Threads 平台聲量比較，以及 20 位創業、自媒體、線上事業教學 KOL 對標研究。">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,550;9..144,700&family=Noto+Sans+TC:wght@400;500;700;800&display=swap');
+
+    :root {
+      --paper: #f7f2e8;
+      --paper-2: #fffaf0;
+      --ink: #1f2524;
+      --muted: #68706e;
+      --line: rgba(31, 37, 36, .16);
+      --line-strong: rgba(31, 37, 36, .34);
+      --green: #1e7f65;
+      --green-2: #d7eadf;
+      --blue: #26639b;
+      --blue-2: #d9e7f3;
+      --coral: #c6553d;
+      --coral-2: #f2d9cf;
+      --gold: #b7851e;
+      --gold-2: #f1dfb7;
+      --plum: #7a5270;
+      --plum-2: #eadbe5;
+      --shadow: 0 18px 60px rgba(45, 36, 25, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(31,37,36,.035) 1px, transparent 1px) 0 0 / 56px 56px,
+        linear-gradient(180deg, rgba(31,37,36,.028) 1px, transparent 1px) 0 0 / 56px 56px,
+        var(--paper);
+      font-family: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.72;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: color-mix(in oklch, currentColor 38%, transparent);
+      text-underline-offset: 3px;
+    }
+
+    a:hover { text-decoration-color: currentColor; }
+
+    .shell {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in oklch, var(--paper) 92%, white);
+      backdrop-filter: blur(16px);
+    }
+
+    .topbar-inner {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line-strong);
+      background: var(--ink);
+      color: var(--paper-2);
+      font-family: "Fraunces", serif;
+      font-size: 17px;
+      border-radius: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      padding: 7px 9px;
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .nav a:hover {
+      background: rgba(31, 37, 36, .07);
+      color: var(--ink);
+    }
+
+    .hero {
+      padding: clamp(54px, 7vw, 94px) 0 38px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(330px, .85fr);
+      gap: clamp(28px, 5vw, 58px);
+      align-items: end;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--coral);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: "Fraunces", "Noto Sans TC", serif;
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 860px;
+      font-size: clamp(42px, 7.6vw, 94px);
+    }
+
+    h2 {
+      font-size: clamp(31px, 4.8vw, 58px);
+    }
+
+    h3 {
+      font-size: clamp(22px, 2.5vw, 32px);
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 24px 0 0;
+      color: #414946;
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.78;
+    }
+
+    .date-stamp {
+      justify-self: end;
+      width: min(100%, 420px);
+      border: 1px solid var(--line-strong);
+      background: var(--paper-2);
+      box-shadow: var(--shadow);
+    }
+
+    .date-stamp .row {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      min-height: 58px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .date-stamp .row:last-child { border-bottom: 0; }
+
+    .date-stamp .label {
+      padding: 14px 16px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      border-right: 1px solid var(--line);
+      letter-spacing: .06em;
+    }
+
+    .date-stamp .value {
+      padding: 13px 16px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: clamp(46px, 6vw, 82px) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(280px, .65fr);
+      gap: 30px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .verdict-board {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+      border: 1px solid var(--line-strong);
+      background: var(--paper-2);
+    }
+
+    .verdict-main {
+      padding: clamp(22px, 4vw, 38px);
+      border-right: 1px solid var(--line);
+    }
+
+    .verdict-main strong {
+      color: var(--green);
+    }
+
+    .verdict-main p {
+      margin: 18px 0 0;
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.65;
+    }
+
+    .verdict-side {
+      display: grid;
+    }
+
+    .mini-cell {
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mini-cell:last-child { border-bottom: 0; }
+
+    .mini-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .mini-value {
+      margin-top: 7px;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .rank-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border: 1px solid var(--line-strong);
+      background: var(--paper-2);
+    }
+
+    .rank-card {
+      min-height: 250px;
+      padding: 20px;
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .rank-card:last-child { border-right: 0; }
+
+    .rank-num {
+      font-family: "Fraunces", serif;
+      font-size: 36px;
+      line-height: 1;
+      color: var(--muted);
+    }
+
+    .platform-name {
+      margin-top: 12px;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .reach {
+      font-family: "Fraunces", serif;
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .reach span {
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .bar-track {
+      height: 10px;
+      border: 1px solid var(--line);
+      background: rgba(31, 37, 36, .05);
+      overflow: hidden;
+    }
+
+    .bar {
+      height: 100%;
+      background: var(--green);
+      transform-origin: left;
+    }
+
+    .platform-desc {
+      color: #4d5552;
+      font-size: 13px;
+      line-height: 1.58;
+    }
+
+    .rank-card[data-tone="tiktok"] .bar { background: var(--coral); }
+    .rank-card[data-tone="youtube"] .bar { background: var(--blue); }
+    .rank-card[data-tone="instagram"] .bar { background: var(--plum); }
+    .rank-card[data-tone="threads"] .bar { background: var(--gold); }
+
+    .insight-lanes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--line-strong);
+      background: var(--line);
+      margin-top: 28px;
+    }
+
+    .lane {
+      background: var(--paper-2);
+      padding: 24px;
+    }
+
+    .lane h3 {
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .lane p {
+      margin: 12px 0 0;
+      color: #4c5451;
+      font-size: 14px;
+    }
+
+    .matrix {
+      border: 1px solid var(--line-strong);
+      background: var(--paper-2);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 920px;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      position: sticky;
+      top: 62px;
+      z-index: 2;
+      background: color-mix(in oklch, var(--paper-2) 92%, white);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    td {
+      font-size: 14px;
+    }
+
+    .name-cell {
+      min-width: 210px;
+      font-weight: 900;
+      line-height: 1.42;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 24px;
+      padding: 2px 8px;
+      border: 1px solid var(--line);
+      background: rgba(31, 37, 36, .035);
+      color: #3e4643;
+      font-size: 12px;
+      font-weight: 800;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .pill.green { background: var(--green-2); color: #135b47; }
+    .pill.blue { background: var(--blue-2); color: #204f7c; }
+    .pill.coral { background: var(--coral-2); color: #873a2a; }
+    .pill.gold { background: var(--gold-2); color: #6a4a0f; }
+    .pill.plum { background: var(--plum-2); color: #5c3d54; }
+
+    .score {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line-strong);
+      font-family: "Fraunces", serif;
+      font-size: 20px;
+      background: var(--paper);
+    }
+
+    .kol-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .kol-card {
+      border: 1px solid var(--line-strong);
+      background: var(--paper-2);
+      box-shadow: 0 10px 34px rgba(45, 36, 25, .06);
+    }
+
+    .kol-card summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 0;
+    }
+
+    .kol-card summary::-webkit-details-marker { display: none; }
+
+    .kol-top {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(280px, 1.1fr);
+      gap: 1px;
+      background: var(--line);
+    }
+
+    .kol-title,
+    .kol-scan {
+      background: var(--paper-2);
+      padding: 22px;
+    }
+
+    .kol-index {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .kol-title h3 {
+      margin-top: 7px;
+    }
+
+    .kol-sub {
+      margin: 10px 0 0;
+      color: #4c5451;
+      font-size: 14px;
+    }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .link-chip {
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      background: rgba(31, 37, 36, .035);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .link-chip:hover {
+      background: rgba(31, 37, 36, .075);
+    }
+
+    .scan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .scan-item {
+      background: color-mix(in oklch, var(--paper-2) 94%, white);
+      padding: 13px;
+      min-height: 92px;
+    }
+
+    .scan-label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .scan-value {
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .kol-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
+      gap: 1px;
+      background: var(--line);
+      border-top: 1px solid var(--line);
+    }
+
+    .content-list,
+    .analysis-box {
+      background: var(--paper-2);
+      padding: 22px;
+    }
+
+    .content-list ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .content-list li + li { margin-top: 13px; }
+
+    .content-title {
+      display: inline;
+      font-weight: 900;
+    }
+
+    .views {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .analysis-box p {
+      margin: 0;
+      font-size: 14px;
+      color: #444c49;
+    }
+
+    .analysis-box p + p { margin-top: 14px; }
+
+    .strategy-map {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 1px;
+      border: 1px solid var(--line-strong);
+      background: var(--line);
+    }
+
+    .strategy-panel {
+      background: var(--paper-2);
+      padding: clamp(22px, 3vw, 32px);
+    }
+
+    .strategy-panel ul {
+      margin: 18px 0 0;
+      padding-left: 20px;
+    }
+
+    .strategy-panel li + li { margin-top: 12px; }
+
+    .ladder {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      border: 1px solid var(--line);
+      background: rgba(31, 37, 36, .035);
+    }
+
+    .step strong {
+      padding: 14px;
+      border-right: 1px solid var(--line);
+      color: var(--green);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .step span {
+      padding: 12px 14px;
+      font-size: 14px;
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--line-strong);
+      background: var(--line);
+    }
+
+    .source-box {
+      background: var(--paper-2);
+      padding: 22px;
+    }
+
+    .source-box h3 {
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .source-box ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      font-size: 13px;
+    }
+
+    .source-box li + li { margin-top: 8px; }
+
+    .print-button {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 40;
+      border: 1px solid var(--line-strong);
+      background: var(--ink);
+      color: var(--paper-2);
+      padding: 11px 14px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 900;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(31, 37, 36, .18);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-head,
+      .verdict-board,
+      .strategy-map,
+      .kol-top,
+      .kol-body {
+        grid-template-columns: 1fr;
+      }
+
+      .date-stamp { justify-self: stretch; }
+      .verdict-main { border-right: 0; border-bottom: 1px solid var(--line); }
+      .rank-grid { grid-template-columns: 1fr 1fr; }
+      .rank-card:nth-child(2n) { border-right: 0; }
+      .rank-card:last-child { grid-column: 1 / -1; }
+      .insight-lanes,
+      .source-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 24px, 1180px); }
+      .topbar { position: static; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 12px 0; }
+      .nav { justify-content: flex-start; }
+      .hero { padding-top: 36px; }
+      .date-stamp .row { grid-template-columns: 94px 1fr; }
+      .rank-grid { grid-template-columns: 1fr; }
+      .rank-card { border-right: 0; border-bottom: 1px solid var(--line); min-height: 210px; }
+      .rank-card:last-child { border-bottom: 0; }
+      .scan-grid { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 1fr; }
+      .step strong { border-right: 0; border-bottom: 1px solid var(--line); }
+      .print-button { display: none; }
+    }
+
+    @media print {
+      body { background: white; }
+      .topbar, .print-button { display: none; }
+      .shell { width: 100%; }
+      section, .hero { break-inside: avoid; padding: 28px 0; }
+      .kol-card { break-inside: avoid; box-shadow: none; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand"><span class="brand-mark">J</span> Jarvis Market Dossier</div>
+      <nav class="nav" aria-label="報告章節">
+        <a href="#verdict">結論</a>
+        <a href="#platforms">平台排序</a>
+        <a href="#matrix">20 位矩陣</a>
+        <a href="#profiles">帳號卡</a>
+        <a href="#strategy">UBO打法</a>
+        <a href="#sources">來源</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Vietnam Creator &amp; KOL Benchmark</p>
+          <h1>越南創業、自媒體、線上事業 KOL 聲量研究</h1>
+          <p class="hero-copy">
+            目標不是找「最紅的人」，而是找越南版 UBO 最該對標的帳號：誰掌握了創業者、小商家、個人品牌、TikTok Shop / affiliate、內容變現這群人的注意力，以及他們在哪些平台最有聲量。
+          </p>
+        </div>
+        <aside class="date-stamp" aria-label="報告資訊">
+          <div class="row">
+            <div class="label">Date</div>
+            <div class="value">2026-07-05</div>
+          </div>
+          <div class="row">
+            <div class="label">Scope</div>
+            <div class="value">YouTube、TikTok、Facebook、Instagram、Threads</div>
+          </div>
+          <div class="row">
+            <div class="label">Evidence</div>
+            <div class="value">平台廣告觸及資料、公開 YouTube 觀看數、官方頁面、可開啟主頁連結</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="verdict">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Executive Verdict</p>
+            <h2>越南不是 IG / Threads 先行市場；真正的前三名是 Facebook、TikTok、YouTube。</h2>
+          </div>
+          <p class="section-note">
+            DataReportal 的 2026 越南報告顯示，Facebook、TikTok、YouTube 的可觸及規模都在 6,000 萬以上；Instagram 與 Threads 則明顯小一個量級。Decision Lab 也指出 YouTube / TikTok / Facebook 仍主導越南線上行為，但平台忠誠度正在下降，使用者會依內容型態分散注意力。
+          </p>
+        </div>
+
+        <div class="verdict-board">
+          <div class="verdict-main">
+            <h3>給 UBO 越南版的判斷</h3>
+            <p>
+              <strong>TikTok / Facebook Reels 負責破圈，YouTube 負責建立專業信任，Facebook 社群與私訊負責關係沉澱。</strong>
+              Instagram 可以做形象補強；Threads 可測文字型 hook，但現階段不應當成主戰場。
+            </p>
+          </div>
+          <div class="verdict-side">
+            <div class="mini-cell">
+              <div class="mini-label">Highest Reach</div>
+              <div class="mini-value">Facebook：大眾觸及、商業社群、熟齡創業者最穩。</div>
+            </div>
+            <div class="mini-cell">
+              <div class="mini-label">Fastest Growth Signal</div>
+              <div class="mini-value">TikTok：短影音、TikTok Shop、affiliate 教學最有爆發力。</div>
+            </div>
+            <div class="mini-cell">
+              <div class="mini-label">Best Trust Engine</div>
+              <div class="mini-value">YouTube：長內容、教學、案例拆解最容易變成 evergreen trust asset。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platforms">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Platform Ranking</p>
+            <h2>平台聲量排序</h2>
+          </div>
+          <p class="section-note">
+            下列數字以 DataReportal Digital 2026 Vietnam 為主：Facebook、YouTube、Instagram、Threads 為 late 2025 ad reach；TikTok 為 18+ ad reach，不能與全齡使用者完全等同，但足以判斷越南短影音市場的量級。
+          </p>
+        </div>
+
+        <div class="rank-grid" aria-label="越南主要社群平台觸及排序">
+          <article class="rank-card" data-tone="facebook">
+            <div>
+              <div class="rank-num">01</div>
+              <div class="platform-name">Facebook</div>
+            </div>
+            <div>
+              <div class="reach">79.0M <span>ad reach</span></div>
+              <div class="bar-track"><div class="bar" style="width:100%"></div></div>
+              <p class="platform-desc">廣泛覆蓋商業主、熟齡族群、地方社群與私訊轉換。NapoleonCat 2026 年 6 月口徑甚至顯示 89.4M。</p>
+            </div>
+          </article>
+
+          <article class="rank-card" data-tone="tiktok">
+            <div>
+              <div class="rank-num">02</div>
+              <div class="platform-name">TikTok</div>
+            </div>
+            <div>
+              <div class="reach">76.1M <span>18+ reach</span></div>
+              <div class="bar-track"><div class="bar" style="width:96%"></div></div>
+              <p class="platform-desc">DataReportal 顯示 TikTok 越南 ad reach 年增 9.9%。對 TikTok Shop、affiliate、短影音教學尤其重要。</p>
+            </div>
+          </article>
+
+          <article class="rank-card" data-tone="youtube">
+            <div>
+              <div class="rank-num">03</div>
+              <div class="platform-name">YouTube</div>
+            </div>
+            <div>
+              <div class="reach">62.1M <span>ad reach</span></div>
+              <div class="bar-track"><div class="bar" style="width:79%"></div></div>
+              <p class="platform-desc">不一定是最容易爆的入口，但最適合深度教學、長課、案例拆解與信任資產累積。</p>
+            </div>
+          </article>
+
+          <article class="rank-card" data-tone="instagram">
+            <div>
+              <div class="rank-num">04</div>
+              <div class="platform-name">Instagram</div>
+            </div>
+            <div>
+              <div class="reach">11.7M <span>ad reach</span></div>
+              <div class="bar-track"><div class="bar" style="width:15%"></div></div>
+              <p class="platform-desc">適合城市年輕族、生活風格、個人品牌形象；不適合當創業課與線上事業教學主戰場。</p>
+            </div>
+          </article>
+
+          <article class="rank-card" data-tone="threads">
+            <div>
+              <div class="rank-num">05</div>
+              <div class="platform-name">Threads</div>
+            </div>
+            <div>
+              <div class="reach">4.65M <span>ad reach</span></div>
+              <div class="bar-track"><div class="bar" style="width:6%"></div></div>
+              <p class="platform-desc">Decision Lab / Vietnam News 提到 Threads 有增長，但目前仍偏早期社群；適合測文字 hook，不適合單獨承接成交。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="insight-lanes">
+          <div class="lane">
+            <h3>創業類 KOL</h3>
+            <p>Facebook + YouTube 最強。Facebook 承接社群、直播、課程招生；YouTube 承接長版方法論與搜尋。</p>
+          </div>
+          <div class="lane">
+            <h3>自媒體經營類 KOL</h3>
+            <p>TikTok / YouTube / Instagram 混合。TikTok 做流量實驗，YouTube 做完整教學，IG 只在形象與生活風格上加分。</p>
+          </div>
+          <div class="lane">
+            <h3>線上事業教學類 KOL</h3>
+            <p>TikTok Shop、affiliate、dropshipping 類最吃 TikTok + YouTube。短影音引流，YouTube 教 SOP，私域再收斂。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="matrix">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Benchmark Matrix</p>
+            <h2>20 位核心對標帳號總覽</h2>
+          </div>
+          <p class="section-note">
+            分數不是全網粉絲排名，而是「對越南版 UBO 的對標價值」：題材貼合度、可複製打法、公開內容反響、是否能啟發社群／課程／成交設計。
+          </p>
+        </div>
+
+        <div class="matrix">
+          <table>
+            <thead>
+              <tr>
+                <th>KOL / 帳號</th>
+                <th>類別</th>
+                <th>主戰場</th>
+                <th>代表反響</th>
+                <th>UBO 對標價值</th>
+                <th>一句判斷</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="name-cell">Phạm Thành Long</td>
+                <td><span class="pill green">創業 / 銷售</span></td>
+                <td>YouTube + Facebook + 線下課</td>
+                <td>3.13M views</td>
+                <td><span class="score">A+</span></td>
+                <td>大眾創業講師模型，最值得拆 stage energy、銷售話術與課程漏斗。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Tony Dzung / HBR</td>
+                <td><span class="pill green">企業教育</span></td>
+                <td>Facebook + HBR 官網 + YouTube</td>
+                <td>HBR 生態系 / 商業課</td>
+                <td><span class="score">A</span></td>
+                <td>不是 YouTube 流量型，而是企業教育品牌 + seminar 招生型。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Tri Kỷ Cảm Xúc / Web5ngay</td>
+                <td><span class="pill green">溝通 / 成長</span></td>
+                <td>YouTube</td>
+                <td>7.8M views</td>
+                <td><span class="score">A</span></td>
+                <td>用極白話的心理與溝通題，吃到超大泛知識流量。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Thái Phạm / Happy Live</td>
+                <td><span class="pill green">財商 / 投資</span></td>
+                <td>YouTube + 出版 / 課程</td>
+                <td>6.0M views</td>
+                <td><span class="score">A</span></td>
+                <td>證明長版教育內容可以支撐商業信任與知識產品。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Ngô Minh Tuấn / CEO Việt Nam</td>
+                <td><span class="pill green">CEO / 管理</span></td>
+                <td>YouTube + 學院</td>
+                <td>1.59M views</td>
+                <td><span class="score">A-</span></td>
+                <td>適合研究 CEO / SME owner 的管理課敘事。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Tuấn Hà / Vinalink</td>
+                <td><span class="pill green">Digital Marketing</span></td>
+                <td>官網 + YouTube + 課程</td>
+                <td>1.67M views</td>
+                <td><span class="score">A-</span></td>
+                <td>傳統 digital marketing 教育機構，可作定價與課程結構參考。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Giang Ơi</td>
+                <td><span class="pill blue">自媒體 / 個人品牌</span></td>
+                <td>YouTube + IG / Facebook</td>
+                <td>2.66M views</td>
+                <td><span class="score">A</span></td>
+                <td>生活型 creator 如何把信任轉成商業與職涯內容的好案例。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Mayashare</td>
+                <td><span class="pill blue">個人品牌</span></td>
+                <td>YouTube</td>
+                <td>176K views</td>
+                <td><span class="score">B+</span></td>
+                <td>中型但很貼 UBO：個人品牌、內容系統、線上收入。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Huy Dao</td>
+                <td><span class="pill blue">YouTube / AI / 內容</span></td>
+                <td>YouTube</td>
+                <td>201K views</td>
+                <td><span class="score">A-</span></td>
+                <td>最接近 UBO 的「AI + creator operating system」方向。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Duy Muối</td>
+                <td><span class="pill blue">TikTok / 內容</span></td>
+                <td>YouTube + TikTok 教學</td>
+                <td>274K views</td>
+                <td><span class="score">A-</span></td>
+                <td>短影音課程化最直接的競品與參考。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Solo Creator</td>
+                <td><span class="pill blue">Creator 教學</span></td>
+                <td>YouTube</td>
+                <td>138K views</td>
+                <td><span class="score">B+</span></td>
+                <td>適合拆 creator path、內容策略與個人工作流。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Chang Đi Viết</td>
+                <td><span class="pill blue">寫作 / TikTok</span></td>
+                <td>YouTube</td>
+                <td>115K views</td>
+                <td><span class="score">B+</span></td>
+                <td>適合研究「普通人如何開始做內容」的低門檻敘事。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Hoàng Mạnh Cường / Topmax</td>
+                <td><span class="pill coral">TikTok Shop / Affiliate</span></td>
+                <td>YouTube + TikTok 教學</td>
+                <td>227K views</td>
+                <td><span class="score">A</span></td>
+                <td>線上事業實操型，最容易搶 UBO 的初階學員。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Linh Thach</td>
+                <td><span class="pill coral">Dropshipping</span></td>
+                <td>YouTube</td>
+                <td>178K views</td>
+                <td><span class="score">A-</span></td>
+                <td>跨境 / Shopify / organic content，可作進階模組參考。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Minh Xin Chào</td>
+                <td><span class="pill coral">Affiliate / Copywriting</span></td>
+                <td>YouTube</td>
+                <td>480K views</td>
+                <td><span class="score">A-</span></td>
+                <td>善於把線上收入講成清楚步驟，值得研究文案承諾。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Thương Chia Sẻ</td>
+                <td><span class="pill coral">Global Affiliate</span></td>
+                <td>YouTube</td>
+                <td>268K views</td>
+                <td><span class="score">B+</span></td>
+                <td>挑戰型內容與真實操作流程，比空泛致富敘事更可信。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Duy Start</td>
+                <td><span class="pill coral">TikTok Shop / Shopee</span></td>
+                <td>YouTube</td>
+                <td>520K views</td>
+                <td><span class="score">A-</span></td>
+                <td>初學者搜尋需求很強，直接反映市場在找 SOP。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Hồ Mạnh Thắng</td>
+                <td><span class="pill coral">AI / Affiliate / Shorts</span></td>
+                <td>YouTube</td>
+                <td>880K views</td>
+                <td><span class="score">A</span></td>
+                <td>非常貼近 UBO 的 AI 變現主題，但需避免過度「快速賺錢」感。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Kiemtienedu / Đặng Tuyết</td>
+                <td><span class="pill coral">Online Business</span></td>
+                <td>YouTube</td>
+                <td>286K views</td>
+                <td><span class="score">B+</span></td>
+                <td>入門者友善，主題集中在選品、短影音、平台賣貨。</td>
+              </tr>
+              <tr>
+                <td class="name-cell">Đoàn Đức Đồng</td>
+                <td><span class="pill coral">Facebook Monetization</span></td>
+                <td>YouTube + Facebook Reels 教學</td>
+                <td>120K views</td>
+                <td><span class="score">B+</span></td>
+                <td>補齊 Facebook 變現視角，對 UBO 的「Facebook → 私域」很有參考價值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">KOL Profile Cards</p>
+            <h2>20 位 KOL 主頁與代表內容</h2>
+          </div>
+          <p class="section-note">
+            觀看數為 2026-07-05 以公開 YouTube 搜尋 / yt-dlp 抓取的近似值。Facebook、TikTok、Instagram、Threads 的互動資料公開性較不穩定，因此此處以可驗證主頁與影片連結為主，並在分析中補平台判斷。
+          </p>
+        </div>
+
+        <div class="kol-grid">
+          <details class="kol-card" open>
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">01 / Entrepreneurship</div>
+                  <h3>Phạm Thành Long</h3>
+                  <p class="kol-sub">越南大眾創業、銷售、個人成長訓練代表人物。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCZFX6pLjhPr96Wo5tlxuJOg">YouTube 主頁</a>
+                    <a class="link-chip" href="https://long.vn/">官網</a>
+                    <a class="link-chip" href="https://www.facebook.com/longguru/">Facebook</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube / Facebook</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">創業、銷售、商業心態</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">高能量舞台 + 課程漏斗</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=LB21ZOjyTjA">Khởi nghiệp với 30 triệu đồng - Ý tưởng kinh doanh nhượng quyền bánh mì</a> <span class="views">約 3.13M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=uhDmKvncGpQ">Bạn sẽ bán được hàng và có thu nhập tốt hơn nếu áp dụng 8+2 bước này</a> <span class="views">約 1.32M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=lfw9o-nELVg">Khởi nghiệp Kinh doanh thế nào khi ít vốn, ít quan hệ, ít kiến thức</a> <span class="views">約 964K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：他的爆款不是「資訊最精準」，而是把普通人想創業、怕沒錢、怕不會賣的焦慮講成可行路徑。這類帳號很適合研究越南受眾對創業承諾的語氣。</p>
+                <p>UBO 啟發：不要只賣 AI 工具，要賣「我可以從內容、提問、成交開始做出收入」的心理入口。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card" open>
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">02 / Entrepreneurship</div>
+                  <h3>Tony Dzung / HBR Business School</h3>
+                  <p class="kol-sub">企業教育、marketing、sale、nhân sự 與 CEO seminar 型品牌。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://hbr.edu.vn/mr-tony-dzung">HBR 主頁</a>
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCYkc_xlyaWBslS4hW0Rcd7w">HBR YouTube</a>
+                    <a class="link-chip" href="https://www.youtube.com/@tonydzung7666">Tony YouTube</a>
+                    <a class="link-chip" href="https://www.facebook.com/tonydzung.com.vn/">Facebook</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">Facebook / 官網 / 活動</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Marketing、Sale、HR、AI</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">企業主高客單招生</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=Cf_LNTHHodc">3 bước xây dựng phòng Marketing hiệu quả cho doanh nghiệp SMEs</a> <span class="views">約 11.3K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=LHK_T_9ia1M">Cách Xây Dựng KPI Phòng Marketing</a> <span class="views">約 10.6K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=3RfrF_3H_P0">4 Levels of Branding in Marketing</a> <span class="views">約 3.5K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Tony Dzung 的 YouTube 觀看數不一定最大，但 HBR 官網與 Facebook 活動導向很強，主打 SME CEO 的 sale / marketing / HR 系統。</p>
+                <p>UBO 啟發：若要收企業主，內容不是短技巧，而要包裝成「幫 CEO 建一套可自運轉的增長系統」。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">03 / Entrepreneurship</div>
+                  <h3>Tri Kỷ Cảm Xúc / Web5ngay</h3>
+                  <p class="kol-sub">用白話心理、溝通與成長內容打進泛知識大眾市場。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCkgjUHB8sdWbmdp39swMrTg">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">溝通、心態、銷售入門</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">高普及度白話教學</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=vo5xRGu7s44">Cách Nói Chuyện Khôn Ngoan | Kỹ Năng Giao Tiếp Xuất Sắc</a> <span class="views">約 7.80M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=Dw3O6ErOJfA">Làm Sao Để Thiệt Giỏi Một Thứ Gì Đó?</a> <span class="views">約 2.41M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=SmuZYYFHyqc">Cách Bán Được Hàng (không biết gì cũng dư sức làm được)</a> <span class="views">約 1.39M views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：這類帳號證明越南 YouTube 上「溝通、變厲害、變會賣」可以有非常大的泛流量，不必一開始就講商業術語。</p>
+                <p>UBO 啟發：全域成交系統的入口可以先從「你不是不會賣，是不會問、不會聽、不會講故事」切入。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">04 / Entrepreneurship</div>
+                  <h3>Thái Phạm / Happy Live</h3>
+                  <p class="kol-sub">財商、投資、商業思維與出版型知識產品代表。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCDJIGO_3ycJAKLPv7Yh396A">YouTube 主頁</a>
+                    <a class="link-chip" href="https://happylive.com.vn/">Happy Live</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube / 出版</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">財商、投資、收入提升</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">長版教育信任資產</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=TaiZS8-i6L0">Hướng dẫn đầu tư chứng khoán cơ bản A-Z</a> <span class="views">約 6.05M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=tjsZJZT8vLM">Chiến thuật chọn mã chứng khoán cho nhà đầu tư dài hạn</a> <span class="views">約 790K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=crWsf8NM3rM">Công thức thần kỳ giúp nâng thu nhập lên 1000 lần</a> <span class="views">約 195K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：雖然偏投資財商，但他的長內容教學與知識產品路徑非常成熟。高觀看數代表越南受眾願意花時間看完整方法論。</p>
+                <p>UBO 啟發：越南版可以設計「長版 YouTube masterclass + 社群任務」雙層，而不是只做短影音。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">05 / Entrepreneurship</div>
+                  <h3>Ngô Minh Tuấn / Học viện CEO Việt Nam</h3>
+                  <p class="kol-sub">CEO 管理、組織、人事與企業主教育內容。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCOqlLTqZ_QF67yQ-MXxqJjg">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube / 學院</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">CEO、管理、組織</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">SME owner 教育</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=gR0eeFcEFKs">CEO &amp; Nghệ Thuật Quản Trị Nhân Sự Trong Doanh Nghiệp</a> <span class="views">約 1.60M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=pOpeW0wezRo">99% các bạn trẻ cần phải biết điều này nếu muốn thành công</a> <span class="views">約 505K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=m-aqdAni1Vg">Tư duy khởi nghiệp khi ít vốn, ít kinh nghiệm</a> <span class="views">約 174K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：他面向的是更成熟的企業主與管理者，不只是想賺外快的人。這條線對 UBO 高階模組有參考價值。</p>
+                <p>UBO 啟發：若要做企業主升級版，內容要從「工具」升級成「老闆如何設計人、流程、流量與成交」。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">06 / Marketing Education</div>
+                  <h3>Tuấn Hà / Vinalink Academy</h3>
+                  <p class="kol-sub">越南老牌 digital marketing 訓練與企業教育機構。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://vinalink.edu.vn/">官網</a>
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCpHMqDN3Jraj0QAuFtz3-wA">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">官網 / YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Digital marketing、餐飲行銷</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">課程價格與結構</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=1BCF8FsSfSo">Học viện Digital Marketing Vinalink - Lớn nhất Việt Nam</a> <span class="views">約 1.67M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=QNRFMA5eofE">Vinalink Academy - Xem ảnh thực tế các lớp học marketing</a> <span class="views">約 588K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=FhjgutToMWk">72 Tuyệt chiêu Marketing Quán ăn và Nhà hàng</a> <span class="views">約 29K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Vinalink 比較像教育機構而非單一創作者，但它代表越南 digital marketing 課程的既有市場認知。</p>
+                <p>UBO 啟發：UBO 不要只做「digital marketing 課」，要明確避開傳統課程同質化，改成 AI + 內容到成交的任務型社群。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">07 / Self-Media</div>
+                  <h3>Giang Ơi</h3>
+                  <p class="kol-sub">越南知名生活型 YouTuber，擅長把個人經驗轉成信任內容。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UC-AJnWGWhPt3ReFnvzRZ-Kg">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube / IG / Facebook</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">個人品牌、職涯、收入</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">生活信任轉商業</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=YtEmwB7b-zo">10 cách kiếm thêm tiền tại nhà</a> <span class="views">約 2.66M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=6VduoyiTQ1A">5 ways I make money</a> <span class="views">約 2.09M views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=qbBDF8DIFGk">Marketing là gì, có khó không?</a> <span class="views">約 1.45M views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Giang Ơi 不是硬派商業講師，但她證明「個人生活經驗 + 職涯 / 收入 / marketing」可以有極大信任槓桿。</p>
+                <p>UBO 啟發：越南版若只像課程老師會太硬；需要設計更生活化、更像朋友分享的內容層。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">08 / Self-Media</div>
+                  <h3>Mayashare</h3>
+                  <p class="kol-sub">個人品牌、內容創作、自學與線上收入主題。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCCDF_nAxu4v7kTrGRpnH3Qw">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Personal brand、content system</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">中型精準受眾</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=Df11SkLnekM">Hướng dẫn xây dựng thương hiệu cá nhân</a> <span class="views">約 176K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=bRv4Wrvc_E0">Xây dựng thương hiệu cá nhân mà không cần nổi tiếng</a> <span class="views">約 18K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=P26cteh2eus">Cách kinh doanh online tốt nhất cho người lười năm 2025</a> <span class="views">約 3.8K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Mayashare 的聲量不是最大，但題材非常接近 UBO 的個人定位、個人品牌與線上生意。</p>
+                <p>UBO 啟發：可以研究她如何把抽象的 personal brand 拆成具體步驟，適合 Level 1 onboarding 參考。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">09 / Self-Media</div>
+                  <h3>Huy Dao</h3>
+                  <p class="kol-sub">YouTube 成長、marketing、AI 工具與創作者工作流。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCYYZ6k9B70YW1nP-qAJ8A-w">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">YouTube、AI、內容系統</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">AI creator OS</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=M6R6xDzdWQ0">Cách Làm Youtube Cho Người Mới Bắt Đầu | Giải Mã Thuật Toán</a> <span class="views">約 201K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=leK-fk-zn9Q">Lộ Trình Kiếm Tiền với YouTube Ngay Từ Ngày Đầu Tiên</a> <span class="views">約 178K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=Ocec0ByUcD8">3 Năm Kinh Nghiệm Xây Kênh Youtube trong 29 Phút</a> <span class="views">約 149K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Huy Dao 是最貼近「用工具與系統做內容」的一批越南創作者，受眾也較像會接受 AI workflow 的人。</p>
+                <p>UBO 啟發：可對標他的長版教學架構，把 AI 定位 prompt、內容排程、腳本與發布後優化做成社群任務。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">10 / Self-Media</div>
+                  <h3>Duy Muối</h3>
+                  <p class="kol-sub">TikTok 建號、內容靈感、短影音轉換與個人傳播。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UC9H6Pms3MTuWWdefbfcE8ug">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">TikTok 教學 / YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">TikTok、content、conversion</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">短影音課程化</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=1FJ5VNOFzG4">Khóa học TikTok cơ bản chi tiết nhất 2025</a> <span class="views">約 274K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=RU7P55dwDec">Để không bao giờ cạn Content Tiktok</a> <span class="views">約 103K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=BsfjF6_ND9Y">Học TikTok Cơ Bản Chi Tiết Nhất 2026</a> <span class="views">約 83K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Duy Muối 把 TikTok 的抽象平台感，拆成可學的內容方法。這是越南版 UBO 最直接會撞到的短影音教學市場。</p>
+                <p>UBO 啟發：不要只教「怎麼拍 TikTok」，要把它接到 Zalo / Facebook 私訊、成交提問與產品梯度。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">11 / Self-Media</div>
+                  <h3>Solo Creator</h3>
+                  <p class="kol-sub">內容創作者路線、YouTube 策略與 creator 工作流。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCdFKMBhZoyvtnICpgsxw5MQ">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Creator path、內容策略</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">小型 creator SOP</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=8aXpdIZwA18">Lộ trình bài bản để trở thành Content Creator</a> <span class="views">約 138K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=FY8gmYBCPa0">Chiến Lược Nội Dung chắc chắn thành công trên Youtube</a> <span class="views">約 17K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=NJLc5gLR7u0">2 Secrets to NEVER FAIL at Content Creation</a> <span class="views">約 15.5K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Solo Creator 的價值在於方法論清楚，適合看越南創作者如何包裝「從 0 到開始做內容」。</p>
+                <p>UBO 啟發：可把 UBO Level 1 設計成 creator path，而不是課程清單：定位、題材、腳本、發布、回饋、成交。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">12 / Self-Media</div>
+                  <h3>Chang Đi Viết</h3>
+                  <p class="kol-sub">寫作、TikTok 建號、內容靈感與普通人創作者敘事。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCq0VIZeUMaRzUANT-1FjKsA">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube / TikTok 題材</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">寫作、TikTok、內容收入</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">低門檻起步敘事</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=w5NIX-yOTfo">“Người bình thường” xây kênh TikTok - 3 bước bắt đầu</a> <span class="views">約 115K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=eaRzV8zg73k">Xây kênh TikTok | 35 ý tưởng nội dung vô hạn</a> <span class="views">約 34K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=ZVifTLaI4yA">Kiếm tiền từ sáng tạo nội dung</a> <span class="views">約 10K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：她的切口不是大師感，而是「普通人也可以做」。這對低信心的新手很有吸引力。</p>
+                <p>UBO 啟發：越南版 UBO 的新手文案可以少一點霸氣，多一點「你不用很厲害，也能先開始產出第一批內容」。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">13 / Online Business</div>
+                  <h3>Hoàng Mạnh Cường / Marketing Thực Chiến</h3>
+                  <p class="kol-sub">TikTok affiliate、TikTok Shop、選品與小商家線上賣貨。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCATFMpbyv3e9vuDsjDP3nEg">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube / TikTok 題材</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Affiliate、TikTok Shop、選品</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">最直接初階競品</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=8h5rhgKte2U">Hướng Dẫn Xây Kênh Affiliate Tiktok từng bước</a> <span class="views">約 227K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=G8IAamv9RNw">Khởi nghiệp bán hàng online ít vốn, ít kinh nghiệm</a> <span class="views">約 82K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=BHWmSOSzli0">Cách xây kênh TikTok bán hàng cho người mới bắt đầu</a> <span class="views">約 67K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：這種帳號直接吃到「我想用 TikTok 賣貨、做 affiliate」的需求，是 UBO 越南版初期最容易被比價的競品。</p>
+                <p>UBO 啟發：若 UBO 只講內容技巧會被這類帳號打穿；要加上商業模型、成交提問、私域跟進與案例陪跑。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">14 / Online Business</div>
+                  <h3>Linh Thach</h3>
+                  <p class="kol-sub">Dropshipping、Shopify、organic content 與跨境線上生意。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCtKtoAw_vB1Q7DVhF85YZqQ">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Dropshipping、Shopify</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">跨境電商模組</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=Qilftk42mIc">Làm Dropship năm 2024: Tìm Sản Phẩm</a> <span class="views">約 178K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=_8HaKLoyAEE">72 Hour Dropship Challenge</a> <span class="views">約 136K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=nj7u4KVIqBg">Kiếm tiền Dropship 2024: Organic Content</a> <span class="views">約 133K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Linh Thach 更偏跨境與 Shopify，不是大眾課型，但很適合研究越南受眾對 global online business 的接受度。</p>
+                <p>UBO 啟發：跨境電商適合放在高階模組；初階主承諾仍應先是內容、信任、成交，不要一開始賣跨境發財夢。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">15 / Online Business</div>
+                  <h3>Minh Xin Chào</h3>
+                  <p class="kol-sub">Affiliate marketing、copywriting、線上收入與 AI 影片變現。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UC9MSOMwrdRgysvPsaKBi4Mw">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Affiliate、Copywriting</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">收入型標題與 SOP</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=R5TztJF4oeQ">Kiếm tiền từ Affiliate MKT từ A-Z cho người mới</a> <span class="views">約 480K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=niAwI7d1PHE">3 bước kiếm 3-5 triệu/tháng từ Copywriting tại nhà</a> <span class="views">約 276K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=r5h-gpbyJKw">7 Passive Income Sources for 2024</a> <span class="views">約 258K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Minh 的標題與承諾非常「收入結果導向」，能抓到想在家、想副業、想用 copywriting / affiliate 變現的人。</p>
+                <p>UBO 啟發：UBO 可以借用結果導向，但必須加上風控與真實任務，避免落入快速致富感。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">16 / Online Business</div>
+                  <h3>Thương Chia Sẻ</h3>
+                  <p class="kol-sub">Affiliate challenge、global affiliate、Google Ads 與 AI tools affiliate。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCMorCu_dNbFyLFDqH-Ytq5A">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Affiliate、challenge、global</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">實作挑戰內容</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=FJ2zhdAVbRM">48 Hour Affiliate Challenge</a> <span class="views">約 268K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=IVBFtmXyu3o">Hướng Dẫn Tìm Dự Án Affiliate NGON cho người mới</a> <span class="views">約 31K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=PuodkwQhdKM">Affiliate Marketing For Beginners 2024</a> <span class="views">約 26.8K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：挑戰型內容比純教學更容易製造「我也想試」的心理。這類格式對 UBO 的 7 天 / 30 天任務設計很有用。</p>
+                <p>UBO 啟發：越南 founding cohort 可以設計成「7 ngày từ nội dung đến cuộc trò chuyện bán hàng」，用 challenge 驅動參與。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">17 / Online Business</div>
+                  <h3>Duy Start</h3>
+                  <p class="kol-sub">TikTok Shop affiliate、Shopee affiliate、平台開通與新手 SOP。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCB-2XBYUFJXG97Vofa0mJoA">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube / TikTok Shop 題材</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">TikTok Shop、Shopee、Affiliate</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">平台教學搜尋流量</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=hb3EYiBt03s">Hướng Dẫn Làm Tiếp Thị Liên Kết trên TikTok Shop</a> <span class="views">約 520K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=I1Zwk8rQKNk">Cách Đăng Ký TikTok Shop / TikTok Seller</a> <span class="views">約 234K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=BsMccp2DuVk">Cách đăng ký Shopee Affiliate 2025</a> <span class="views">約 225K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Duy Start 反映非常直接的新手需求：不是想聽大理論，而是「帳號怎麼開、連結怎麼掛、第一步怎麼做」。</p>
+                <p>UBO 啟發：UBO 的工具包要有夠多 checklists 與 screen-by-screen 任務，否則會輸給純 SOP 帳號。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">18 / Online Business</div>
+                  <h3>Hồ Mạnh Thắng</h3>
+                  <p class="kol-sub">TikTok Shop、AI video、Facebook / Shopee affiliate 與 Shorts 變現。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCy3iNR1gkLD6T6aciNhsmaQ">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube / TikTok Shop 題材</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">AI 影片、Affiliate、Shorts</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">AI 變現競品</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=fx8tzJUd7t8">Cách kiếm tiền ngay từ TikTok Shop trong 1 ngày</a> <span class="views">約 880K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=WHvRjOPum3M">Làm VIDEO AI kiếm tiền affiliate trên Facebook x Shopee</a> <span class="views">約 170K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=G1TNC5cv_uA">Cách kiếm tiền từ YouTube Shorts trong 1 ngày</a> <span class="views">約 146K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：這是「AI + 變現 + 平台」的強競品型帳號，但它的風格也可能讓高品質客戶覺得太快、太急、太賺錢承諾。</p>
+                <p>UBO 啟發：UBO 要用 AI 變現作 hook，但必須把價值升級成長期生意系統，才不會跟速成變現內容混在一起。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">19 / Online Business</div>
+                  <h3>Kiemtienedu Channel / Đặng Tuyết</h3>
+                  <p class="kol-sub">入門電商、選品、TikTok 賣貨、Shopee 與線上銷售。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCA23G1MYNJrSWJkhxES99Eg">YouTube 主頁</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Online business、選品、TikTok</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">新手電商教育</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=yV61tYREEzI">5 cách Kinh Doanh Online cho người mới bắt đầu</a> <span class="views">約 286K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=MK2ypdWplNk">9 ngành hàng hot đang giúp dân kinh doanh online kiếm tiền</a> <span class="views">約 228K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=hIgaZvI0a0E">Cách làm video TikTok bán hàng kiếm tiền online</a> <span class="views">約 177K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：這類內容非常吃搜尋需求，受眾多為「想開始但不知道賣什麼、怎麼拍、去哪賣」的新手。</p>
+                <p>UBO 啟發：入門內容要有強指令感：選品、腳本、發文、私訊、成交、追蹤，每一步都要落地。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="kol-card">
+            <summary>
+              <div class="kol-top">
+                <div class="kol-title">
+                  <div class="kol-index">20 / Online Business</div>
+                  <h3>Đoàn Đức Đồng</h3>
+                  <p class="kol-sub">Facebook Reels、Facebook 變現、Shopee affiliate 與影片流量。</p>
+                  <div class="link-row">
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCLQLFwTQPd3tvyPJ6UXGLDA">YouTube 主頁</a>
+                    <a class="link-chip" href="https://www.youtube.com/channel/UCCqfi8-p2a6yOmD-Qe4WziQ">Video 頻道</a>
+                  </div>
+                </div>
+                <div class="kol-scan">
+                  <div class="scan-grid">
+                    <div class="scan-item"><div class="scan-label">強平台</div><div class="scan-value">Facebook 題材 / YouTube</div></div>
+                    <div class="scan-item"><div class="scan-label">題材</div><div class="scan-value">Facebook Reels、monetization</div></div>
+                    <div class="scan-item"><div class="scan-label">對標</div><div class="scan-value">Facebook 變現補位</div></div>
+                  </div>
+                </div>
+              </div>
+            </summary>
+            <div class="kol-body">
+              <div class="content-list">
+                <ol>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=oxeaOjHDu3M">Cách bật kiếm tiền trên Facebook Reels mới nhất 2026</a> <span class="views">約 120K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=i6vTdxm-5OU">Điều kiện để bật kiếm tiền trên Facebook mới nhất 2026</a> <span class="views">約 64.6K views</span></li>
+                  <li><a class="content-title" href="https://www.youtube.com/watch?v=-W1tUFFCkOg">Cách kiếm tiền trên Facebook chi tiết nhất 2026</a> <span class="views">約 50.5K views</span></li>
+                </ol>
+              </div>
+              <div class="analysis-box">
+                <p>繁中分析：Facebook 在越南很大，但商業教學常被 TikTok Shop 搶風頭。Đoàn Đức Đồng 補足了 Facebook Reels / monetization 這條線。</p>
+                <p>UBO 啟發：越南版不能只做 TikTok；Facebook 仍是信任、社群、私訊與年齡較成熟客群的重要場域。</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="strategy">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">UBO Vietnam Playbook</p>
+            <h2>對標後的進場打法</h2>
+          </div>
+          <p class="section-note">
+            這 20 位帳號共同證明：越南市場有強烈的「自我提升、內容變現、平台賣貨、商業系統」需求。UBO 的優勢不該是單點技巧，而是把這些碎片整合成一條能陪跑的成交系統。
+          </p>
+        </div>
+
+        <div class="strategy-map">
+          <div class="strategy-panel">
+            <h3>建議內容佈局</h3>
+            <div class="ladder">
+              <div class="step"><strong>Reach</strong><span>TikTok / Facebook Reels：短 hook，主題是 AI chốt đơn、từ nội dung đến doanh thu、TikTok/Facebook -> Zalo -> chốt đơn。</span></div>
+              <div class="step"><strong>Trust</strong><span>YouTube：每週 1 支 12-25 分鐘長版拆解，講案例、流程、模板、實作任務。</span></div>
+              <div class="step"><strong>Convert</strong><span>Facebook group / Zalo：承接私訊、直播、問答、任務回報與 30 天 founding cohort。</span></div>
+              <div class="step"><strong>Proof</strong><span>每週產 3 種 proof：學員貼文前後對照、私訊成交截圖、內容任務完成榜。</span></div>
+            </div>
+          </div>
+          <div class="strategy-panel">
+            <h3>不要正面硬碰的地方</h3>
+            <ul>
+              <li>不要只做 TikTok 技巧課：Duy Muối、Hoàng Mạnh Cường 等帳號已經非常直接。</li>
+              <li>不要只做 affiliate 速成：Hồ Mạnh Thắng、Minh Xin Chào、Duy Start 會讓價格與承諾變得很卷。</li>
+              <li>不要把 Instagram / Threads 當主場：越南量級不夠，適合測文字與形象，不適合第一波成交。</li>
+              <li>不要用抽象「人生系統」當越南第一波主承諾：應翻成生意語言，如內容到成交、AI 成交副駕、個人商業系統。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="insight-lanes" style="margin-top:28px">
+          <div class="lane">
+            <h3>30 天 founding cohort 命名</h3>
+            <p>Vietnam AI Closing System / Từ Nội Dung Đến Doanh Thu / AI Content-to-Sales Sprint。重點是行動與結果，不是工具清單。</p>
+          </div>
+          <div class="lane">
+            <h3>最該對標的 5 位</h3>
+            <p>Phạm Thành Long、Tony Dzung、Duy Muối、Hồ Mạnh Thắng、Huy Dao。剛好覆蓋創業信任、企業主教育、短影音、AI 變現與內容系統。</p>
+          </div>
+          <div class="lane">
+            <h3>最該測的 4 組 Hook</h3>
+            <p>AI 幫你把內容變成交談；7 天做出第一條銷售型內容；不用爆紅也能建立私域成交；從 Facebook/TikTok 到 Zalo 跟進 SOP。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Sources &amp; Caveats</p>
+            <h2>來源與限制</h2>
+          </div>
+          <p class="section-note">
+            社群平台公開數據不是同一口徑。報告採用「平台總量」與「KOL 公開內容反響」兩層證據；不把廣告觸及誤當 MAU，也不把 YouTube 觀看數誤當全平台排名。
+          </p>
+        </div>
+
+        <div class="source-grid">
+          <div class="source-box">
+            <h3>平台基準資料</h3>
+            <ul>
+              <li><a href="https://datareportal.com/reports/digital-2026-vietnam">DataReportal Digital 2026: Vietnam</a></li>
+              <li><a href="https://stats.napoleoncat.com/social-media-users-in-viet_nam/2026/">NapoleonCat Vietnam Social Media Users 2026</a></li>
+              <li><a href="https://www.decisionlab.co/blog/vietnams-digital-landscape-q3-2025">Decision Lab Connected Consumer Q3 2025</a></li>
+              <li><a href="https://vietnamnews.vn/economy/1766426/digital-landscape-shows-shift-toward-experience-led-competition-report-says.html">Vietnam News / Decision Lab Q4 2025 summary</a></li>
+            </ul>
+          </div>
+          <div class="source-box">
+            <h3>官方 / 品牌頁</h3>
+            <ul>
+              <li><a href="https://long.vn/">Phạm Thành Long official site</a></li>
+              <li><a href="https://hbr.edu.vn/mr-tony-dzung">HBR - Mr. Tony Dzung</a></li>
+              <li><a href="https://vinalink.edu.vn/">Vinalink Academy</a></li>
+              <li><a href="https://happylive.com.vn/">Happy Live</a></li>
+            </ul>
+          </div>
+          <div class="source-box">
+            <h3>KOL 內容資料</h3>
+            <ul>
+              <li>20 位 KOL 的 YouTube 主頁與影片連結已放在各帳號卡內。</li>
+              <li>觀看數以 2026-07-05 公開 YouTube 搜尋結果 / yt-dlp metadata 為準，可能隨時間變動。</li>
+              <li>TikTok、Facebook、Instagram、Threads 的貼文互動資料公開不穩，因此此版不宣稱「全平台最高互動」。</li>
+              <li>若要進一步做投放或合作，建議下一步用本地社群分析工具或人工截圖建檔，補齊 follower、近 30 天互動率、短影音爆款率。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="print-button" type="button" onclick="window.print()">列印 / 匯出 PDF</button>
+</body>
+</html>
