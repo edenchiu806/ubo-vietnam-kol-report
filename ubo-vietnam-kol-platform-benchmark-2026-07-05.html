@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>越南 KOL 平台聲量與對標帳號研究 | UBO Vietnam</title>
-  <meta name="description" content="越南 YouTube、TikTok、Facebook、Instagram、Threads 平台聲量比較，以及 20 位創業、自媒體、線上事業教學 KOL 對標研究。">
+  <meta name="description" content="越南 YouTube、TikTok、Facebook、Instagram、Threads 平台聲量比較，以及創業、自媒體、線上事業教學 KOL 對標研究。">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,550;9..144,700&family=Noto+Sans+TC:wght@400;500;700;800&display=swap');
 
@@ -376,6 +376,111 @@
       font-size: 14px;
     }
 
+    .social-native-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      border: 1px solid var(--line-strong);
+      background: var(--line);
+      gap: 1px;
+    }
+
+    .social-native-card {
+      background: var(--paper-2);
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-native-head {
+      padding: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .social-native-index {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .social-native-card h3 {
+      margin-top: 8px;
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 19px;
+      font-weight: 900;
+      line-height: 1.24;
+    }
+
+    .social-native-tagline {
+      margin: 10px 0 0;
+      color: #4c5451;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .platform-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 14px;
+    }
+
+    .platform-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      background: rgba(31, 37, 36, .035);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+
+    .platform-badge.tiktok { background: var(--coral-2); color: #873a2a; }
+    .platform-badge.instagram { background: var(--plum-2); color: #5c3d54; }
+    .platform-badge.threads { background: var(--gold-2); color: #6a4a0f; }
+
+    .social-native-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .evidence-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #444c49;
+      font-size: 13px;
+      line-height: 1.58;
+    }
+
+    .evidence-list li + li { margin-top: 9px; }
+
+    .ubo-lesson {
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.58;
+    }
+
+    .ubo-lesson strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
     .matrix {
       border: 1px solid var(--line-strong);
       background: var(--paper-2);
@@ -640,7 +745,7 @@
 
     .source-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1px;
       border: 1px solid var(--line-strong);
       background: var(--line);
@@ -697,6 +802,8 @@
       .rank-grid { grid-template-columns: 1fr 1fr; }
       .rank-card:nth-child(2n) { border-right: 0; }
       .rank-card:last-child { grid-column: 1 / -1; }
+      .social-native-grid { grid-template-columns: 1fr 1fr; }
+      .social-native-card:last-child { grid-column: 1 / -1; min-height: auto; }
       .insight-lanes,
       .source-grid {
         grid-template-columns: 1fr;
@@ -713,6 +820,9 @@
       .rank-grid { grid-template-columns: 1fr; }
       .rank-card { border-right: 0; border-bottom: 1px solid var(--line); min-height: 210px; }
       .rank-card:last-child { border-bottom: 0; }
+      .social-native-grid { grid-template-columns: 1fr; }
+      .social-native-card,
+      .social-native-card:last-child { grid-column: auto; min-height: auto; }
       .scan-grid { grid-template-columns: 1fr; }
       .step { grid-template-columns: 1fr; }
       .step strong { border-right: 0; border-bottom: 1px solid var(--line); }
@@ -736,6 +846,7 @@
       <nav class="nav" aria-label="報告章節">
         <a href="#verdict">結論</a>
         <a href="#platforms">平台排序</a>
+        <a href="#social-native">非 YouTube</a>
         <a href="#matrix">20 位矩陣</a>
         <a href="#profiles">帳號卡</a>
         <a href="#strategy">UBO打法</a>
@@ -757,7 +868,7 @@
         <aside class="date-stamp" aria-label="報告資訊">
           <div class="row">
             <div class="label">Date</div>
-            <div class="value">2026-07-05</div>
+            <div class="value">2026-07-05 / updated 2026-07-06</div>
           </div>
           <div class="row">
             <div class="label">Scope</div>
@@ -896,6 +1007,152 @@
             <h3>線上事業教學類 KOL</h3>
             <p>TikTok Shop、affiliate、dropshipping 類最吃 TikTok + YouTube。短影音引流，YouTube 教 SOP，私域再收斂。</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="social-native">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">TikTok / Instagram / Threads Radar</p>
+            <h2>補充 5 個非 YouTube 原生觀察樣本</h2>
+          </div>
+          <p class="section-note">
+            原本 20 位帳號偏 YouTube 長內容，這裡補上更貼近手機端行為的樣本。它們不等於「粉絲總榜」，而是用來觀察短影音破圈、直播成交、Instagram 信任形象、Threads 文字 hook 與 B2B 對話的實戰路徑。
+          </p>
+        </div>
+
+        <div class="social-native-grid">
+          <article class="social-native-card">
+            <div class="social-native-head">
+              <div class="social-native-index">01 / TikTok Education</div>
+              <h3>Duy Muối</h3>
+              <p class="social-native-tagline">短影音建號、內容方法、TikTok / affiliate 學習社群。</p>
+              <div class="platform-stack">
+                <span class="platform-badge tiktok">TikTok</span>
+                <span class="platform-badge">Community</span>
+                <span class="platform-badge">Course</span>
+              </div>
+              <div class="link-row">
+                <a class="link-chip" href="https://www.tiktok.com/@duymuoi">TikTok</a>
+                <a class="link-chip" href="https://link.dcmedia.vn/duymuoi">Bio / Membership</a>
+                <a class="link-chip" href="https://www.duymuoi.vn/">Website</a>
+              </div>
+            </div>
+            <div class="social-native-body">
+              <ul class="evidence-list">
+                <li>DC Media bio 頁直接導向 membership、學習社群、課程 / workshop 與諮詢表單。</li>
+                <li>自有網站分類明確圍繞「Xây kênh、Kiếm tiền、Case Study、Xu hướng」。</li>
+                <li>適合作為 UBO 越南版「TikTok 技巧課競品」與「短影音學習社群」對標。</li>
+              </ul>
+              <p class="ubo-lesson"><strong>UBO 啟發</strong>不要只教拍片技巧；要把短影音接到私訊、Zalo / Facebook 承接、成交提問與 30 天任務。</p>
+            </div>
+          </article>
+
+          <article class="social-native-card">
+            <div class="social-native-head">
+              <div class="social-native-index">02 / TikTok + Instagram</div>
+              <h3>Hồ Mạnh Thắng</h3>
+              <p class="social-native-tagline">AI 影片、內容變現、affiliate、TikTok Shop 與多平台自動化題材。</p>
+              <div class="platform-stack">
+                <span class="platform-badge tiktok">TikTok</span>
+                <span class="platform-badge instagram">Instagram</span>
+                <span class="platform-badge threads">Threads Topic</span>
+              </div>
+              <div class="link-row">
+                <a class="link-chip" href="https://www.tiktok.com/@homanhthang.com">TikTok</a>
+                <a class="link-chip" href="https://www.instagram.com/homanhthang/">Instagram</a>
+                <a class="link-chip" href="https://www.facebook.com/HoManhThang.Official/">Facebook</a>
+              </div>
+            </div>
+            <div class="social-native-body">
+              <ul class="evidence-list">
+                <li>第三方 TikTok 目錄標記帳號為 <a href="https://starngage.com/plus/hi/brands/tiktok/homanhthang.com">@homanhthang.com</a>。</li>
+                <li>Instagram 可開啟主頁，且近期貼文與 video marketing、TikTok、Threads、affiliate 題材互相連動。</li>
+                <li>原報告已列入 YouTube，但他的題材實際更接近「短影音 + AI + 變現」跨平台打法。</li>
+              </ul>
+              <p class="ubo-lesson"><strong>UBO 啟發</strong>這是最貼近「AI + 內容 + 變現」的競品型帳號，要避免把 UBO 做成另一個 affiliate 速成課。</p>
+            </div>
+          </article>
+
+          <article class="social-native-card">
+            <div class="social-native-head">
+              <div class="social-native-index">03 / TikTok Shop Live</div>
+              <h3>Quyền Leo Daily</h3>
+              <p class="social-native-tagline">家庭內容起家，轉成 TikTok Shop mega live commerce 代表。</p>
+              <div class="platform-stack">
+                <span class="platform-badge tiktok">TikTok</span>
+                <span class="platform-badge instagram">Instagram</span>
+                <span class="platform-badge">Live Commerce</span>
+              </div>
+              <div class="link-row">
+                <a class="link-chip" href="https://www.tiktok.com/@quyenleodaily">TikTok</a>
+                <a class="link-chip" href="https://www.instagram.com/la.quoc.quyen/">Instagram</a>
+                <a class="link-chip" href="https://www.brandsvietnam.com/congdong/topic/339066-thay-gi-sau-phien-livestream-75-ty-tren-tiktok-cua-quyen-leo-daily">Case Study</a>
+              </div>
+            </div>
+            <div class="social-native-body">
+              <ul class="evidence-list">
+                <li>Kenh14 報導曾列出 TikTok @quyenleodaily 約 4M followers、89M likes。</li>
+                <li>Brands Vietnam 拆解 75 tỷ VND 直播案例，指出 13 小時、151,300 件商品與 2M viewers。</li>
+                <li>CafeBiz 後續報導其 100 tỷ VND mega live，並描述品牌、平台 voucher、deal 與觀看峰值。</li>
+              </ul>
+              <p class="ubo-lesson"><strong>UBO 啟發</strong>如果越南版 UBO 做「內容到成交」，必須看直播商務的 pre-heat、trust、deal、FOMO 與售後風控。</p>
+            </div>
+          </article>
+
+          <article class="social-native-card">
+            <div class="social-native-head">
+              <div class="social-native-index">04 / TikTok + Instagram Trust</div>
+              <h3>Võ Hà Linh</h3>
+              <p class="social-native-tagline">產品評測、直播帶貨、信任與爭議管理的高強度樣本。</p>
+              <div class="platform-stack">
+                <span class="platform-badge tiktok">TikTok</span>
+                <span class="platform-badge instagram">Instagram</span>
+                <span class="platform-badge">Review</span>
+              </div>
+              <div class="link-row">
+                <a class="link-chip" href="https://www.tiktok.com/@halinhofficial">TikTok</a>
+                <a class="link-chip" href="https://www.instagram.com/halinh.official1211/">Instagram</a>
+                <a class="link-chip" href="https://starngage.com/plus/uk/blog/top-creators-to-reach-gen-z-audiences-in-vietnam-beauty">Creator Note</a>
+              </div>
+            </div>
+            <div class="social-native-body">
+              <ul class="evidence-list">
+                <li>StarNgage 將她列為越南 Gen Z beauty 受眾中的高商業效率 creator，重點是真實評測與 livestream commerce。</li>
+                <li>Kenh14 報導標記 TikTok @halinhofficial，並可觀察其 review 內容帶來信任、爭議與修正壓力。</li>
+                <li>Instagram 不是主成交場，但可補個人形象、品牌合作與生活信任訊號。</li>
+              </ul>
+              <p class="ubo-lesson"><strong>UBO 啟發</strong>信任型內容要有邊界：真實、敢講、但避免傷害商家與誇大承諾；這是 UBO 風控課的好案例。</p>
+            </div>
+          </article>
+
+          <article class="social-native-card">
+            <div class="social-native-head">
+              <div class="social-native-index">05 / Threads Early Signal</div>
+              <h3>Hà Phan / RiseHub Agency</h3>
+              <p class="social-native-tagline">Threads + Instagram 上的 branding、marketing、freelancer / partner 對話樣本。</p>
+              <div class="platform-stack">
+                <span class="platform-badge threads">Threads</span>
+                <span class="platform-badge instagram">Instagram</span>
+                <span class="platform-badge">B2B</span>
+              </div>
+              <div class="link-row">
+                <a class="link-chip" href="https://www.threads.com/@haphan.risehub">Threads</a>
+                <a class="link-chip" href="https://www.instagram.com/haphan.risehub/">Instagram</a>
+                <a class="link-chip" href="https://www.facebook.com/haphan.risehub/">Facebook</a>
+              </div>
+            </div>
+            <div class="social-native-body">
+              <ul class="evidence-list">
+                <li>Threads profile 可見 RiseHub Agency 相關介紹與創辦者個人敘事。</li>
+                <li>近期 Threads post 出現 performance marketing partner / freelancer 招募與品牌服務溝通。</li>
+                <li>這不是大流量 KOL，而是觀察 Threads 如何承接 B2B、人才、合作與文字型 hook 的樣本。</li>
+              </ul>
+              <p class="ubo-lesson"><strong>UBO 啟發</strong>Threads 不該當主戰場，但很適合測短文字切角：招募、合作、反思、案例句、hook，成功再搬到 Facebook / TikTok 放大。</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1903,6 +2160,16 @@
               <li>觀看數以 2026-07-05 公開 YouTube 搜尋結果 / yt-dlp metadata 為準，可能隨時間變動。</li>
               <li>TikTok、Facebook、Instagram、Threads 的貼文互動資料公開不穩，因此此版不宣稱「全平台最高互動」。</li>
               <li>若要進一步做投放或合作，建議下一步用本地社群分析工具或人工截圖建檔，補齊 follower、近 30 天互動率、短影音爆款率。</li>
+            </ul>
+          </div>
+          <div class="source-box">
+            <h3>新增非 YouTube 樣本</h3>
+            <ul>
+              <li><a href="https://link.dcmedia.vn/duymuoi">Duy Muối DC Media bio</a>、<a href="https://www.duymuoi.vn/">duymuoi.vn</a></li>
+              <li><a href="https://starngage.com/plus/hi/brands/tiktok/homanhthang.com">Hồ Mạnh Thắng TikTok directory</a>、<a href="https://www.instagram.com/homanhthang/">Instagram</a></li>
+              <li><a href="https://kenh14.vn/quyen-leo-daily-tu-nhan-vien-chay-ban-thanh-cap-vo-chong-trieu-do-bi-doi-thu-choi-xau-tren-livestream-la-dieu-khong-tranh-duoc-2024031215004371.chn">Quyền Leo Daily profile</a>、<a href="https://www.brandsvietnam.com/congdong/topic/339066-thay-gi-sau-phien-livestream-75-ty-tren-tiktok-cua-quyen-leo-daily">75 tỷ live case</a>、<a href="https://cafebiz.vn/vo-chong-quyen-leo-daily-pha-vo-moi-ky-luc-livestream-tiktok-thu-100-ty-dong-sau-17-tieng-duoc-tiktok-shop-tai-tro-1-trieu-usd-tien-voucher-freeship-tat-ca-don-hang-176240506105726812.chn">100 tỷ live case</a></li>
+              <li><a href="https://starngage.com/plus/uk/blog/top-creators-to-reach-gen-z-audiences-in-vietnam-beauty">Võ Hà Linh creator note</a>、<a href="https://kenh14.vn/phan-ung-cua-netizen-ve-chuyen-vo-ha-linh-xin-loi-nguoi-khen-quay-dau-la-bo-nguoi-quyet-tay-chay-toi-ben-20230412135245799.chn">TikTok / review context</a></li>
+              <li><a href="https://www.threads.com/@haphan.risehub">Hà Phan / RiseHub Threads</a>、<a href="https://www.instagram.com/haphan.risehub/">Instagram</a></li>
             </ul>
           </div>
         </div>
